@@ -1,9 +1,19 @@
-
+//开始或重置游戏
 const startGame =  () => {
     // 将开始游戏按钮设为程序入口
     updateParameters();
+    
     window.requestAnimationFrame(main);
+    
 }
+//暂停游戏或继续游戏
+const pauseorContinueGame = () => {
+    
+    isPaused= !isPaused;
+}
+
+
+
 
 const selectLevel = () => {
     const level = document.getElementById("levelSelect").value;
@@ -20,7 +30,7 @@ const updateScoreDisplay = () => {
     updatePlayerScore();
     updateAIScore();
 }
-
+//刷新游戏参数
 const updateParameters = () => {
     // 刷新两个游戏启动暂停参数
     GameStarter = true;

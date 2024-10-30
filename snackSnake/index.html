@@ -27,6 +27,7 @@
         
       <!-- 游戏速度控制 -->
       <div class="parameter">
+          <!-- 标签和input绑定 -->
           <label for="speed">速度 (ms):</label>
           <input type="range" id="speed" name="speed" min="1" max="20"/>
       </div>
@@ -59,9 +60,12 @@
       </label>
       </div>
 
-      <!-- 开始游戏按钮 -->
-      <button class="start-button" onclick="startGame()">开始游戏</button>
+      <!-- 开始/重置游戏按钮 -->
+      <button class="start-button" onclick="startGame()">开始游戏/重置游戏</button>
+      <!-- 暂停/继续游戏按钮 -->
+       <button class="pause-button" onclick="pauseorContinueGame()">暂停游戏/继续游戏</button>
       </div>
+      
 
     <!-- 分数显示部分 -->
       <div class="score-section">

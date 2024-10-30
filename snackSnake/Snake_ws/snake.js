@@ -1,4 +1,4 @@
-let SNAKE_SPEED = 5;
+let SNAKE_SPEED = 5;//蛇的速度
 let PlayerScore = 0;
 
 let snakeBody = [
@@ -79,7 +79,7 @@ const isSnakeTouchingWalls = () => {
 }
 
 
-const ResetSnake = () => {
+const ResetSnake = () => {//重置蛇的属性
     snakeBody = [
         {x:11, y:11},  // head
         {x:11, y:10},
@@ -88,7 +88,7 @@ const ResetSnake = () => {
     PlayerScore = 0;
     inputDirection = {x: 1, y: 0}
     document.getElementById("playerScore").innerText = PlayerScore;
-    SNAKE_SPEED = document.getElementById("speed").value;
+    SNAKE_SPEED = document.getElementById("speed").value;//获取用户输入的速度值
 }
 
 const updatePlayerScore = () => {
