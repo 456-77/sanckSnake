@@ -10,5 +10,6 @@
 const difficulties = {
     1: aStarPath,   // 已实现
     2: Greedypath,
-    3: BFS_DFS
+    3: BFS,
+    4: DFS
 }

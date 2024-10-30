@@ -9,10 +9,11 @@ const selectLevel = () => {
     const level = document.getElementById("levelSelect").value;
     walls = levels[level];
 }
-
+//设置ai的难度
 const setAIDifficulty = () => {
-    const difficulty = document.getElementById("aiDifficulty").value;
-    AIDifficulty = difficulties[difficulty];
+    let difficulty = document.getElementById("aiDifficulty").value;
+    // let AIDifficulty = difficulties[difficulty];
+    return parseInt(difficulty);
 }
 
 const updateScoreDisplay = () => {
