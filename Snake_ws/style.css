@@ -1,0 +1,144 @@
+/* 网页样式设计 by B22042127袁非*/
+
+body {
+  background-image: url("Sunset.jpg");
+
+   /* Centering on image`s center*/
+   background-position-y: center;
+   background-position-x: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: gray;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* 左侧任务栏样式 */
+.sidebar {
+  width: 30%; /* 左侧栏宽度 */
+  background-color: #f4f4f4;
+  opacity: 75%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid #ddd;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.sidebar .parameter {
+  margin-bottom: 20px;
+}
+
+.sidebar .parameter label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 速度控制和大小控制 */
+.sidebar .parameter input[type="range"],
+.sidebar .parameter input[type="number"] {
+  width: 100%;
+}
+
+/* AI难度选择栏样式 */
+.sidebar select, 
+.sidebar input[type="checkbox"] {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+.sidebar .score-section, 
+.sidebar .settings-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* 中侧游戏界面 */
+.game-container {
+  flex: 1; /* 填满剩余空间 */
+  display: flex;
+}
+
+#game-board {
+  background-color: black;
+  opacity: 75%;
+  width: 80vmin;
+  height: 80vmin;
+  display: grid;
+  grid-template-rows: repeat(40, 1fr);
+  grid-template-columns: repeat(40, 1fr);
+}
+
+.snake {
+  background-color: lime;
+  border: 0.25vmin solid black;
+}
+
+.aisnake {
+  background-color: purple;
+  border: 0.25vmin solid black;
+}
+
+.food {
+  background-color: rgb(10, 6, 241);
+  border: 0.25vmin solid gray;
+}
+.big-food {
+  border: 0.5vmin solid gray; /* 较大的边框，保持一致性 */
+  background-color: red; /* 区分大食物的颜色 */
+  border-radius: 50%; /* 可以增加圆形外观 */
+  
+}
+
+
+.wall {
+  background-color: brown;
+  border: 0.25vmin solid gray;
+}
+
+ /* 右侧展示栏 */
+.game-gallery {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-left: 2px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.game-gallery h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.game-options button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.game-options button:hover {
+  background-color: #0056b3;
+}
+
